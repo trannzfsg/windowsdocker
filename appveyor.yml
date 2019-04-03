@@ -2,14 +2,14 @@ version: 1.0.{build}
 image: Visual Studio 2017
 
 environment:
-  DOCKER_USER: tranzha
-  DOCKER_PASS: test1234
+  DOCKER_USER: asdf
+  DOCKER_PASS: fda
 install:
   - docker version
 
 build_script:
-  - docker build -t windowsdockertest .
+  - docker build -t windowsdocker:latest .
 
 deploy_script:
-  - docker login -u="$env:DOCKER_USER" -p="$env:DOCKER_PASS"
-  - docker push windowsdockertest
+  - docker login -u="tranzha" -p="test1234"
+  - docker push tranzha/windowsdocker:latest
