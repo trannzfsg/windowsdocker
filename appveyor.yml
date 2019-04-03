@@ -9,7 +9,8 @@ install:
 
 build_script:
   - docker build -t windowsdocker:latest .
+  - docker tag windowsdocker:latest tranzha/windowsdocker:latest
 
 deploy_script:
   - docker login -u="%DOCKER_USER%" -p="%DOCKER_PASS%"
-  - docker push windowsdocker:latest
+  - docker push tranzha/windowsdocker:latest
