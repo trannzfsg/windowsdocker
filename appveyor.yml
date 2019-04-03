@@ -10,9 +10,6 @@ install:
 build_script:
   - docker build -t windowsdockertest .
 
-test_script:
-  - docker run windowsdockertest
-
 deploy_script:
   - docker login -u="$env:DOCKER_USER" -p="$env:DOCKER_PASS"
   - docker push windowsdockertest
