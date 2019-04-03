@@ -11,5 +11,5 @@ build_script:
   - docker build -t windowsdocker:latest .
 
 deploy_script:
-  - ps: docker login -u="$env:DOCKER_USER" -p="$env:DOCKER_PASS"
-  - ps: docker push windowsdocker:latest
+  - docker login -u="%DOCKER_USER%" -p="%DOCKER_PASS%"
+  - docker push windowsdocker:latest
