@@ -1,3 +1,5 @@
+# this is testing windows container to run asp.net (non-core) applications
+
 FROM microsoft/iis:latest
 SHELL ["powershell"]
 
